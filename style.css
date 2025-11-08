@@ -1,0 +1,151 @@
+body { 
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; }
+
+
+.navbar{
+  z-index: 999;
+}
+.animated-section{
+  overflow-x: hidden;
+}
+
+.card img { height: 220px; object-fit: contain; }
+
+.navbar-toggler {
+  background-color: #f8f9fa; /* Light background */
+  border: 1px solid #ddd;    /* Light border color */
+}
+
+.baby :hover {
+  border: 1px solid black;
+}
+
+.btn-success:hover {
+  background-color: blue;
+}
+
+.hero {
+   background-color: rgb(170, 109, 40);
+   color: white;
+   padding: 100px 0;
+   text-align: center;
+   min-height: 50vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin-top: 80px;
+  }
+
+.card img:hover{
+   transform: scale(0.9);
+}
+
+.elements :hover{
+   background-color: rgba(41, 131, 41, 0.692);
+   border-radius: 9px;
+   
+}
+
+.section-title { 
+    margin-bottom: 40px;
+    text-align: center; }
+
+.slide-left {
+  opacity: 0;
+  transform: translateX(-100%); 
+}
+
+.slide-left.visible{
+   animation: slideInLeft 1s ease-out forwards;
+   animation-delay: 0.5s;
+}
+
+/* Slide in from right */
+.slide-right {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.slide-right.visible{
+   animation: slideInRight 1s ease-out forwards;
+  animation-delay: 0.5s; /* slight delay for effect */
+}
+
+/* Keyframes */
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.ev-card-top {
+  opacity: 0;
+  transform: translateY(-200px);
+  animation: slideFromTop 1.5s ease-out forwards;
+}
+
+/* Slide from bottom */
+.ev-card-bottom {
+  opacity: 0;
+  transform: translateY(200px);
+  animation: slideFromBottom 1.5s ease-out forwards;
+}
+
+/* Keyframes */
+@keyframes slideFromTop {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFromBottom {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.responsive-img {
+   max-width: 400px; /* maximum width */
+   height: auto;     /* height adjusts automatically */
+   display: block;   /* optional: removes extra space below image */
+}
+
+/* Example custom responsive typography */
+@media (max-width: 576px) {
+  .fly h3 {
+    font-size: 1.2rem;  /* Even smaller font size for very small mobile screens */
+  }
+   .fly p {
+    font-size: 0.9rem;  /* Smaller font size for paragraphs on very small screens */
+  }
+  
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+   .fly h3 {
+    font-size: 1.5rem;  /* Smaller font size for small tablets */
+  }
+  .fly p {
+    font-size: 1rem;  /* Slightly smaller font for tablets */
+  }
+}
+
+@media (min-width: 769px) {
+   .fly h3 {
+    font-size: 2.5rem;  /* Larger font for desktop */
+  }
+   .fly p {
+    font-size: 1.25rem;  /* Larger paragraph text for desktop */
+  }
+}
